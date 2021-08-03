@@ -23,6 +23,7 @@ namespace DemoAPIDependencyInjection
             //Infractructure
             services.AddScoped<IToDoRepository, ToDoRepository>();
             services.AddSingleton<ICosmoDBService>(InitializeCosmosClientInstanceAsync(configuration.GetSection("CosmosDb")).GetAwaiter().GetResult());
+            //TO DO connect cosmos 
         }
 
         private static async Task<ICosmoDBService> InitializeCosmosClientInstanceAsync(IConfigurationSection configurationSection)

@@ -37,7 +37,7 @@ namespace DemoAPI
                     options.Authority = "https://localhost:44398";
                 });
             services.AddControllers();
-            RegisterServices(services);
+            RegisterServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configures the HTTP request pipeline.
